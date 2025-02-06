@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/YOUR_PATH/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset básico */
+	
+		html {
+    scroll-behavior: smooth;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+          scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            padding-right: 10%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6)),
+                        url('https://images.pexels.com/photos/6976098/pexels-photo-6976098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: right;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s 0.3s forwards;
+        }
+
+        /* Menú en línea */
+        .menu-line {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .menu-line a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-line a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Sobre Mí */
+        .sobre-mi {
+            padding: 50px 20px;
+            text-align: center;
+			scroll-behavior: smooth;
+        }
+
+        .sobre-mi h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .sobre-mi p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Experiencia */
+        .experiencia {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .experiencia h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .experiencia .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .experiencia .gallery .gallery-item {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .experiencia .gallery .gallery-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .experiencia .contact-btn {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #fff;
+            color: #25d366;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+        }
+
+        .experiencia .contact-btn i {
+            margin-right: 10px;
+        }
+
+        .experiencia .contact-btn:hover {
+            background-color: #25d366;
+            color: #fff;
+        }
+
+        /* Barra de Redes Sociales */
+        .social-bar {
+            position: fixed;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-decoration: none;
+        }
+
+        .social-bar a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-bar a:hover {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding-right: 5%;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .social-bar {
+                left: 15px;
+            }
+
+            .menu-line a {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .experiencia .gallery .gallery-item {
+                flex: 1 1 calc(100% - 40px);
+                max-width: calc(100% - 40px);
+            }
+			.letra{
+				color: #808080
+			}
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Melwin</h1>
+            <p>Modelo Profesional</p>
+            <!-- Menú en Línea -->
+            <div class="menu-line"><a href="#sobre-mi">Sobre Mí</a> <a href="#experiencia">Galeria</a></div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+<section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Soy Melwin, un modelo profesional con una gran pasión por la moda y el estilo. Me dedico a representar las últimas tendencias y a trabajar con marcas prestigiosas para crear campañas impactantes. Mi objetivo es inspirar a otros con mi trabajo y seguir creciendo en la industria.</p>
+    </section>
+    <section id="sobre-mi" class="sobre-mi">
+        <h2>Experiencia</h2>
+        <p>Soy Melwin, un modelo profesional con una gran pasión por la moda y el estilo. Me dedico a representar las últimas tendencias y a trabajar con marcas prestigiosas para crear campañas impactantes. Mi objetivo es inspirar a otros con mi trabajo y seguir creciendo en la industria.</p>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="experiencia">
+      <h2>Galeria</h2>
+      <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/foto-gratis/persona-origen-indio-divirtiendose_23-2150285283.jpg?t=st=1738803614~exp=1738807214~hmac=deec79610fb770238a556c5e05757dc7ba9cc6d7548e758b584d1cfac91a69e6&w=740" alt="Foto 6">
+            </div>
+        </div>
+        <a href="https://wa.me/tu-numero" target="_blank" class="contact-btn"><i class="fab fa-whatsapp"></i>Contáctame</a>
+    </section>
+
+    <!-- Barra de Redes Sociales -->
+    <div class="social-bar">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <img src="iconlogo.png" alt="Tu Imagen">
+        <p ><font color="#A2A2A2">copyright 2025 Sapphiruz - Github</p>
+    </footer>
+
+</body>
+</html>
