@@ -250,26 +250,53 @@
     gap: 20px;
 font-family: 'Playwrite GB S', sans-serif;
 }
-.slide img {
-    width: 100px;
-    height: 100px;
-    animation: scroll 60s linear infinite;
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  
-  .slide-track {
-    width: 100%;
-    display: flex;
-    gap: 3em;
-    overflow: hidden;
+  to {
+    transform: translateX(-100%);
   }
-  
-  .slider {
-    margin-top: 70px;
-    background-color: whitesmoke;
-    padding: 8em 2em;
-  }
-  
-  @keyframes scroll {
-    0% {transform: translateX(0);}
-    100% {transform: translatex(-1000%)}
-  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
