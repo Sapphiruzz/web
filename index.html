@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="./styles.css">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="Inicio">
         <div class="hero-content">
             <h1>Cesar Alvarez</h1>
             <p>Modelo Profesional</p>
-            <a href="#Saber Mas" class="btn">Saber Más</a>
-                </section>
+            <a href="#Saber Mas" class="btn" id="learn-more-btn">Saber Más</a>
+        </div>
+    </section>
+    <script>
+        document.getElementById('learn-more-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#Saber\\ Mas').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
     </head>
               
     
@@ -61,32 +68,257 @@
         <div class="measurements-container">
             <div class="measurements-left">
                 <h1>Medidas</h1>
-                <p>Altura: 1.85m</p>
-                <p>Pecho: 100cm</p>
-                <p>Cintura: 80cm</p>
-                <p>Cadera: 95cm</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-ruler-vertical" style="margin-right: 10px;"></i>Altura:1.85m</p>
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-tshirt" style="margin-right: 10px;"></i>Pecho:100cm</p>
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-ruler-horizontal" style="margin-right: 10px;"></i>Cintura:80cm</p>
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-ruler-combined" style="margin-right: 10px;"></i> Cadera:95cm</p>
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-weight" style="margin-right: 10px;"></i>Peso:75kg</p>
+                    <p style="font-size: 24px; color: #555; margin: 10px auto; flex: 1 1 45%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 10px; border-radius: 25px;"><i class="fas fa-shoe-prints" style="margin-right: 10px;"></i>Talla:42</p>
+                    <a href="#Fotos" class="animated-button">Ir a Fotos</a>
+
+                    <style>
+                        .animated-button {
+                            background-color: #ff5733;
+                            color: white;
+                            padding: 10px;
+                            border-radius: 5px;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 24px;
+                            margin: 0 auto;
+                            text-align: center;
+                            transition: transform 0.3s, background-color 0.3s;
+                        }
+
+                        .animated-button:hover {
+                            background-color: #c70039;
+                            transform: scale(1.1);
+                        }
+                    </style>
+                </div>
             </div>
             <div class="measurements-right">
-                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 1" class="rounded-image" style="max-width: 450px;">
-                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 2" class="rounded-image" style="max-width: 450px;">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                <img src="https://img.freepik.com/foto-gratis/hombre-guapo_144627-14256.jpg?t=st=1738895362~exp=1738898962~hmac=c9a21fec7562c352c59b927776a2a6e127576ca877b2db44fee984cd592f5b8a&w=740" alt="Foto 1" class="rounded-image" style="max-width: 450px;">
+                </div>
+                <div class="mySlides fade">
+                <img src="https://img.freepik.com/foto-gratis/hombre-joven-que-llevaba-traje-azul_1298-160.jpg?t=st=1738895386~exp=1738898986~hmac=dd9a55440b20fadfd132c8da39c100684d0c6705b98a72612ea7619dad0ff1df&w=740" alt="Foto 2" class="rounded-image" style="max-width: 450px;">
+                </div>
+                <div class="mySlides fade">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738895407~exp=1738899007~hmac=ac3df72c359ce1a490893e1866997e44fde270e99653bc29f2c4b2c7a1e32f91&w=740" alt="Foto 3" class="rounded-image" style="max-width: 450px;">
+                </div>
             </div>
+            </div>
+        </div> 
+              <style>
+            .slideshow-container {
+            position: relative;
+            max-width: 450px;
+            margin: auto;
+            }
+            .mySlides {
+            display: none;
+            }
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+        </style>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+        </script>
+    </section>
+      
+
+    <!-- Zona de Pensamiento -->
+    <section class="thought" id="Fotos">
+        <div class="thought-container">
+            <blockquote class="block" style="font-size: 24px; font-style: italic; text-align: center; margin: 40px 0; color: #464646;">
+                "La moda es la forma de decir quién eres sin tener que hablar." - Rachel Zoe
+            </blockquote>
         </div>
     </section>
    
     <!-- Carrusel de Logos -->
-    <section class="logo-carousel">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <marquee behavior="scroll" direction="left" scrollamount="20">
-                    <img src="assets/images/pocholin_1.png" alt="Logo 4" style="background-repeat: repeat-y;">
-                    <img src="assets/images/pocholin_1.png" alt="Logo 4" style="background-repeat: repeat-y;">
-                    <img src="assets/images/pocholin_1.png" alt="Logo 4" style="background-repeat: repeat-y;">
-                    <img src="assets/images/pocholin_1.png" alt="Logo 4" style="background-repeat: repeat-y;">
-                    <img src="assets/images/pocholin_1.png" alt="Logo 4" style="background-repeat: repeat-y;">
-                </marquee>
-            </div>
+    <div class="logos">
+        <div class="logo_items">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        
         </div>
-    </section>
+          <div class="logo_items">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        
+        </div>
+        </div>
+        <!-- Galería de Fotos -->
+        <section class="gallery">
+            <h1>Galería</h1>
+            <div class="gallery-container">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 1" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 2" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 3" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 4" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 5" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 6" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 7" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 8" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 9" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 10" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 11" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 12" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 13" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 13" class="gallery-item" style="max-width: 500px;">
+                <img src="https://img.freepik.com/foto-gratis/camisa-negra-hombre-barba-estilo-hipster-estudio-sobre-fondo-blanco_158595-1852.jpg?t=st=1738890175~exp=1738893775~hmac=62379a4cdd289e6f4af62abe544fed90985edab1b6fc36faa1b3dd54fb16edeb&w=740" alt="Foto 13" class="gallery-item" style="max-width: 500px;">
+            </div>
+        </section>
 
-</body>
+        <!-- Modal para pantalla completa -->
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        </div>
+                <script>
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', event => {
+                document.getElementById('modal').style.display = 'block';
+                document.getElementById('modal-img').src = event.target.src;
+            });
+        });
+
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('modal').style.display = 'none';
+        });
+        </script>
+        <!-- Sección de Videos -->
+        <section class="videos">
+            <h1>Videos</h1>
+            <div class="videos-container">
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <video class="video-item" controls>
+                    <source src="assets/videos/ig1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </section>
+
+        <style>
+       
+        </style>
+
+        <script>
+        document.querySelectorAll('.video-item').forEach(video => {
+            video.addEventListener('click', () => {
+                video.play();
+            });
+        });
+        </script>
+        <!-- Botón de Volver -->
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="#Inicio" class="btn-back" style="background-color: #ff5733; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; transition: background-color 0.3s;">
+                Volver al Inicio
+            </a>
+        </div>
+
+        <style>
+            .btn-back:hover {
+                background-color: #c70039;
+            }
+        </style>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 20px; background-color: #000000; font-size: 12px;">
+            <p>Creada por <span style="color: #131313;">Sapphiruz</span> &copy; 2025</p>
+            <div class="footer-social">
+            <a href="https://www.instagram.com" target="_blank" style="color: #E1306C; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank" style="color: #25D366; margin: 0 10px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" style="color: #ffffff; margin: 0 10px;"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </footer>
+ </body>
 </html>
